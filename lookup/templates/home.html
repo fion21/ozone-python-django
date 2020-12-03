@@ -14,24 +14,25 @@
 	{% if api == "Error..." %}
 		There was an error, please try again...
 	{% else %}
-
-<div class="jumbotron bg-success text-white">
+<ul>
+<div class="jumbotron good text-dark">
   <h1 class="display-4"> {{ api.0.Category.Name }}</h1>
-  <p class="lead">Current: {{ api.0.ReportingArea }} Air Quality: {{ api.0.AQI }}</p>
+  <h2 class="lead">Current: {{ api.0.ReportingArea }} Air Quality: {{ api.0.AQI }}</h2>
   <p> Air quality is satisfactory, and air pollution poses little or no risk.</p>
-
-
-<div class="jumbotron bg-warning text-dark">
-  <h1 class="display-4"> {{ api.2.Category.Name }}</h1>
-  <p class="lead">Current: {{ api.2.ReportingArea }} Air Quality: {{ api.2.AQI }}</p>
-  <p> Air quality is satisfactory, and air pollution poses little or no risk.</p>
-
-<div class="jumbotron bg-primary text-white">
-  <h1 class="display-4"> {{ api.2.Category.Name }}</h1>
-  <p class="lead">Current: {{ api.2.ReportingArea }} Air Quality: {{ api.2.AQI }}</p>
-  <p> Air quality is satisfactory, and air pollution poses little or no risk.</p>
-
 </div>
+<br/>
+<div class="jumbotron moderate text-dark">
+  <h1 class="display-4"> {{ api.2.Category.Name }}</h1>
+  <h2 class="lead">Current: {{ api.2.ReportingArea }} Air Quality: {{ api.2.AQI }}</h2>
+  <p> Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution."</p>
+</div>
+<br/>
+<div class="jumbotron hazardous text-white">
+  <h1 class="display-4"> {{ api.1.Category.Name }}</h1>
+  <h2 class="lead">Current: {{ api.1.ReportingArea }} Air Quality: {{ api.1.AQI }}</h2>
+  <p>  Health warnings of emergency conditions. The entire population is more likely to be affected."</p>
+</div>
+</ul>
 
 {% endif %}
 
