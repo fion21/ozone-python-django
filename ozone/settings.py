@@ -1,5 +1,4 @@
 from pathlib import Path
-import dj_database_url
 from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -38,7 +37,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middlewhere.WhiteNoiseMiddlewhere',
+
 ]
 
 ROOT_URLCONF = 'ozone.urls'
@@ -111,5 +110,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

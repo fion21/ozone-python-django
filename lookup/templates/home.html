@@ -21,10 +21,19 @@
   <p> Air quality is satisfactory, and air pollution poses little or no risk.</p>
 
 
+<div class="jumbotron bg-warning text-dark">
+  <h1 class="display-4"> {{ api.2.Category.Name }}</h1>
+  <p class="lead">Current: {{ api.2.ReportingArea }} Air Quality: {{ api.2.AQI }}</p>
+  <p> Air quality is satisfactory, and air pollution poses little or no risk.</p>
+
+<div class="jumbotron bg-primary text-white">
+  <h1 class="display-4"> {{ api.2.Category.Name }}</h1>
+  <p class="lead">Current: {{ api.2.ReportingArea }} Air Quality: {{ api.2.AQI }}</p>
+  <p> Air quality is satisfactory, and air pollution poses little or no risk.</p>
 
 </div>
 
-	{% endif %}
+{% endif %}
 
 {% endif %}
 
